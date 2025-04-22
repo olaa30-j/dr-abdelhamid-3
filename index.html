@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ندوة طبية متخصصة في علاج الألم العصبي بأحدث الطرق العلمية">
+  <meta name="theme-color" content="#1a365d">
+
+  <title data-i18n="title">ندوة طبية - علاج ألم الأعصاب السكري</title>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap"
+    as="style">
+  <link rel="preload" href="./assets/dr2.jpg" as="image">
+  <link rel="preload" href="./assets/test.jpg" as="image">
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- CSS Resources -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            medical: {
+              primary: '#0a313d',
+              secondary: '#1a4b5c',
+              accent: '#2d7d9a',
+              light: '#ebf8ff',
+              gold: '#c99b30'
+            }
+          },
+          fontFamily: {
+            sans: ['Tajawal', 'sans-serif']
+          },
+          animation: {
+            'fade-in': 'fadeIn 1s ease-in-out',
+            'fade-in-up': 'fadeInUp 1s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            heartbeat: {
+              '0%': { transform: 'scale(1)' },
+              '25%': { transform: 'scale(1.05)' },
+              '50%': { transform: 'scale(1)' },
+              '75%': { transform: 'scale(1.03)' },
+              '100%': { transform: 'scale(1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Vanta JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <link rel="stylesheet" href="/styles/style.css" />
+
+</head>
+
+<body class="text-gray-800 min-h-screen overflow-x-hidden font-sans" style="scroll-behavior: smooth;">
+  <!-- Header Section -->
+  <header id="main-header" class="py-4 fixed top-0 left-0 right-0 z-[1000] transition-all duration-300">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <img src="./assets/dr2.jpg" alt="د. عبدالحميد حمد" class="h-12 w-12 rounded-full object-cover mx-2">
+          <span class="font-bold text-[#1e3a8a] hidden md:block" data-i18n="clinic_name">صحة الأعصاب</span>
+        </div>
+
+        <div class="flex space-x-3 gap-2 space-x-reverse">
+          <button id="en-button"
+            class="border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white px-2 py-1 md:px-6 md:py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            English
+          </button>
+          <button id="ar-button"
+            class="text-white bg-blue-800 hover:bg-white hover:text-blue-800 px-3 py-1 md:px-8 md:py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            العربية
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Hero Section - Enhanced -->
+  <section id="main"
+    class="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-medical-primary to-medical-secondary">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-[#1e3a8a]/10 rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-72 h-72 bg-medical-gold/10 rounded-full filter blur-3xl"></div>
+      <div
+        class="absolute top-1/2 left-1/2 w-96 h-96 bg-white/5 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2">
+      </div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto animate-fade-in-up text-center">
+        <div
+          class="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 animate-pulse-slow border border-white/30 shadow-lg">
+          <div class="relative flex items-center">
+            <i class="fas fa-bell mx-2 text-red-300"></i>
+            <span id="live-badge" data-i18n="live_badge" class="font-medium text-white">بث مباشر</span>
+          </div>
+        </div>
+
+        <!-- Enhanced Main Title -->
+        <h1 id="title" data-i18n="title"
+          class="text-transparent bg-clip-text bg-gradient-to-br from-red-800 via-red-700 to-red-200 drop-shadow-xl text-5xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          علاج ألم الأعصاب السكري
+        </h1>
+
+        <!-- Enhanced Subtitle -->
+        <h2 id="subtitle" data-i18n="subtitle"
+          class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+          اكتشف أفضل برنامج علاجي يأخذ بيدك من المعاناة التي تعيشها اليوم إلى حالة جميلة حتى تعيش حياتك بمتعة، عالج
+          الألم وتمتع بحياتك
+        </h2>
+
+        <!-- Enhanced CTA Button -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button data-modal-toggle="registration"
+            class="open-registration-button bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check"></i>
+            <span data-i18n="register_text">سجل الآن</span>
+          </button>
+
+          <a href="#video-laptop-section"
+            class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
+            <i class="fas fa-play-circle"></i>
+            <span data-i18n="watch-video">شاهد الفيديو</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Scroll Indicator -->
+    <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce z-10">
+      <a href="#about-webinar"
+        class="inline-block bg-white/10 hover:bg-white/20 border border-white/20 rounded-full p-3 shadow-lg transition-all duration-300">
+        <i class="fas fa-chevron-down text-white text-xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-laptop-section" class="relative h-full m-auto overflow-hidden min-h-[600px] flex items-center">
+    <!-- Vanta.js Background Container -->
+    <div id="vanta-background" class="absolute inset-0 z-0 opacity-25"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mt-12 animate-fade-in-up">
+        <h3 class="text-2xl font-bold text-white mb-4" data-i18n="watch-video-title">شاهد الفيديو التعريفي</h3>
+        <p class="text-white/80 max-w-lg mx-auto mb-6" data-i18n="watch-video-desc">تعرف على قصة الدكتور عبدالحميد
+          ورحلته في علاج الألم العصبي</p>
+      </div>
+      <div class="flex justify-center">
+        <!-- Laptop Frame Container - Enhanced -->
+        <div
+          class="relative w-full max-w-4xl laptop-frame transform hover:scale-[1.02] transition-transform duration-500">
+          <!-- Laptop Frame Image -->
+          <img src="./assets/macbook-white.png" alt="Laptop Frame"
+            class="w-full h-auto object-contain pointer-events-none z-10 relative drop-shadow-2xl">
+
+          <!-- Video Container - Enhanced -->
+          <div
+            class="absolute top-[14%] left-[17%] w-[65%] h-[60%] overflow-hidden rounded-lg bg-black laptop-screen border-4 border-gray-900">
+            <!-- YouTube Iframe -->
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/tZmp973bj2o?rel=0&modestbranding=1"
+              title="قصتي و لماذا هذه القناة في علاج الألم العصبي" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            <!-- Enhanced Play Overlay -->
+            <div
+              class="play-overlay absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 hover:opacity-0">
+              <div
+                class="play-button w-20 h-20 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/70 hover:bg-white/40 transition-all cursor-pointer group">
+                <i class="fas fa-play text-white text-3xl transform group-hover:scale-110 transition-transform"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Webinar Details Section -->
+  <section class="py-20 bg-white" id="about-webinar">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <div class="inline-flex items-center justify-center relative">
+          <h2 class="text-3xl md:text-4xl font-bold text-medical-primary mb-4 relative z-10 px-4 bg-white">
+            <i class="fas fa-info-circle text-medical-accent mx-3"></i>
+            <span data-i18n="webinar-info-title">تفاصيل الندوة</span>
+          </h2>
+          <div
+            class="absolute h-px bg-gradient-to-r from-transparent via-medical-primary to-transparent w-full top-1/2">
+          </div>
+        </div>
+        <p class="text-xl text-gray-600 mt-4" data-i18n="details-tab">كل ما تحتاج معرفته عن الندوة الطبية القادمة</p>
+      </div>
+
+      <!-- Enhanced Tabs -->
+      <div class="flex justify-center mb-10">
+        <div class="inline-flex bg-gray-100 p-1 rounded-xl">
+          <button
+            class="tab-button active px-6 py-3 rounded-lg font-semibold flex items-center bg-white transition-all text-medical-primary"
+            data-tab="goals">
+            <i class="fas fa-bullseye text-medical-accent mx-2"></i>
+            <span data-i18n="goals-title">محاور الندوة</span>
+          </button>
+          <button class="tab-button px-6 py-3 rounded-lg font-semibold flex items-center transition-all"
+            data-tab="audience">
+            <i class="fas fa-users text-medical-accent mx-2"></i>
+            <span data-i18n="audience-title">الفئة المستهدفة</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content my-4">
+        <!-- Goals Tab - Enhanced -->
+        <div id="goals-tab" class="tab-pane animate-fade-in">
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Goal 1 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-r-4 border-medical-primary relative overflow-hidden group hover:bg-gray-50">
+              <div
+                class="absolute -right-4 -top-4 w-20 h-20 bg-medical-primary/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="bg-gradient-to-br from-medical-primary to-medical-accent text-white p-4 rounded-full mb-6 shadow-md">
+                  <i class="fas fa-question-circle text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-i18n="goal-title-1">المحور الأول</h3>
+                <p class="text-gray-600 leading-relaxed mb-6 font-medium" data-i18n="goal-1">
+                  لماذا تستمر المعاناة من الألم العصبي السكري
+                </p>
+                <div
+                  class="mt-auto pt-4 border-t border-gray-100 w-full flex justify-center items-center text-sm text-medical-accent font-semibold">
+                  <i class="fas fa-clock mx-2"></i>
+                  <span data-i18n="duration-30">30 دقيقة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Goal 2 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-r-4 border-medical-accent relative overflow-hidden group hover:bg-gray-50">
+              <div
+                class="absolute -right-4 -top-4 w-20 h-20 bg-medical-accent/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="bg-gradient-to-br from-medical-accent to-blue-500 text-white p-4 rounded-full mb-6 shadow-md">
+                  <i class="fas fa-prescription-bottle-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-i18n="goal-title-2">المحور الثاني</h3>
+                <p class="text-gray-600 leading-relaxed mb-6 font-medium" data-i18n="goal-2">
+                  البرنامج العلاجي المتكامل والذي حقق أفضل نتائج
+                </p>
+                <div
+                  class="mt-auto pt-4 border-t border-gray-100 w-full flex justify-center items-center text-sm text-medical-accent font-semibold">
+                  <i class="fas fa-clock mx-2"></i>
+                  <span data-i18n="duration-45">45 دقيقة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Goal 3 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-r-4 border-medical-gold relative overflow-hidden group hover:bg-gray-50">
+              <div
+                class="absolute -right-4 -top-4 w-20 h-20 bg-medical-gold/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="bg-gradient-to-br from-medical-gold to-amber-400 text-white p-4 rounded-full mb-6 shadow-md">
+                  <i class="fas fa-heartbeat text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4 " data-i18n="goal-title-3">المحور الثالث</h3>
+                <p class="text-gray-600 leading-relaxed mb-6 font-medium" data-i18n="goal-3">
+                  قصص حقيقية من مرضى تحولت حياتهم نحو الأفضل
+                </p>
+                <div
+                  class="mt-auto pt-4 border-t border-gray-100 w-full flex justify-center items-center text-sm text-medical-accent font-semibold">
+                  <i class="fas fa-clock mx-2"></i>
+                  <span data-i18n="duration-25">25 دقيقة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Audience Tab - Enhanced -->
+        <div id="audience-tab" class="tab-pane hidden animate-fade-in">
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Audience 1 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-800 relative overflow-hidden group hover:bg-gray-50 transform hover:-translate-y-1">
+              <div class="flex flex-col items-center text-center">
+                <div class="bg-gradient-to-br from-blue-600 to-teal-600 text-white p-4 rounded-full mb-6 shadow-md">
+                  <i class="fas fa-user-md text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-i18n="first-case">الحالة الأولى</h3>
+                <p class="text-gray-600 leading-relaxed mb-6 font-medium" data-i18n="audience-1">
+                  راجعت الأطباء وتناولت الأدوية وأنت غير سعيد بالنتيجة
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Audience 2 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-800 relative overflow-hidden group hover:bg-gray-50 transform hover:-translate-y-1">
+              <div class="flex flex-col items-center text-center">
+                <div class="bg-gradient-to-br from-blue-600 to-teal-600 text-white p-4 rounded-full mb-6 shadow-md">
+                  <i class="fas fa-user text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-i18n="second-case">الحالة الثانية</h3>
+                <p class="text-gray-600 leading-relaxed mb-6 font-medium" data-i18n="audience-2">
+                  تعاني من ألم وحرقان في الأرجل والأيدي
+                </p>
+              </div>
+            </div>
+
+            <!-- Audience 3 -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-800 relative overflow-hidden group hover:bg-gray-50 transform hover:-translate-y-1">
+              <div class="flex flex-col items-center text-center">
+                <div class="bg-gradient-to-br from-blue-600 to-teal-600 text-white p-4 rounded-full mb-6 shadow-md">
+                  <i class="fas fa-heart text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-i18n="third-case">الحالة الثالثة</h3>
+                <p class="text-gray-600 leading-relaxed mb-6 font-medium" data-i18n="audience-4">
+                  صعوبة في النوم وعدم الاستمتاع بحياتك
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Doctor Section -->
+  <section class="py-20 bg-gray-50 relative overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#1e3a8a]/10 blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-medical-gold/10 blur-3xl"></div>
+
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="relative group mt-8 md:w-1/2">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-[#1e3a8a]/30 to-medical-primary/30 rounded-2xl transform group-hover:scale-105 transition-transform duration-500 -rotate-2">
+            </div>
+            <img src="./assets/testt.gif" alt="د. عبدالحميد حمد"
+              class="relative z-5 w-full h-auto rounded-2xl border-4 border-white shadow-xl transform group-hover:scale-102 transition-transform duration-500">
+            <div
+              class="absolute -bottom-5 -right-5 bg-[#1e3a8a]/90 backdrop-blur-md text-white px-6 py-3 rounded-xl shadow-lg">
+              <span id="instructor-title" data-i18n="instructor-title">استشاري و خبير علاج الألم</span>
+              <div class="flex justify-center gap-4 mt-3">
+                <a href="https://www.youtube.com/@DrAbdulHamidHamad" target="_blank"
+                  class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-medical-primary hover:bg-red-100 transition-colors">
+                  <i class="fab fa-youtube text-sm text-gray-600"></i>
+                </a>
+                <a href="#" target="_blank"
+                  class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-medical-primary hover:bg-blue-100 transition-colors">
+                  <i class="fab fa-facebook-f text-sm text-gray-600"></i>
+                </a>
+                <a href="#" target="_blank"
+                  class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-medical-primary hover:bg-sky-100 transition-colors">
+                  <i class="fab fa-twitter text-sm text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-medical-primary mb-6 flex items-center">
+              <i class="fas fa-user-md text-4xl text-[#1e3a8a] mx-3"></i>
+              <span id="about-instructor-title" data-i18n="about-instructor-title">عن الدكتور عبدالحميد حمد</span>
+            </h2>
+
+            <p id="instructor-desc-1" data-i18n="instructor-desc-1" class="text-lg text-gray-700 mb-6 leading-relaxed">
+              استشاري وخبير عالمي في علاج الألم وخاصة الألم العصبي من جامعة تورونتو في كندا. نشر العديد من الأبحاث
+              العلمية في مجلات طبية مرموقة.
+            </p>
+
+            <ul class="space-y-4">
+              <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <i class="fas fa-check-circle text-green-500 text-xl mt-1 mx-3"></i>
+                <span id="instructor-exp" data-i18n="instructor-exp" class="font-medium">عضو الجمعية الكندية لطب
+                  الألم</span>
+              </li>
+              <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <i class="fas fa-check-circle text-green-500 text-xl mt-1 mx-3"></i>
+                <span id="instructor-patients" data-i18n="instructor-patients" class="font-medium">مؤسّس ورئيس وحدة علاج
+                  الألم في عدة بلدان</span>
+              </li>
+              <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <i class="fas fa-check-circle text-green-500 text-xl mt-1 mx-3"></i>
+                <span id="instructor-desc-2" data-i18n="instructor-desc-2" class="font-medium">مؤلف لعدة كتب متخصصة في
+                  علاج الألم</span>
+              </li>
+              <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all">
+                <i class="fas fa-check-circle text-green-500 text-xl mt-1 mx-3"></i>
+                <span id="instructor-awards" data-i18n="instructor-awards" class="font-medium">خبرة أكثر من ثلاثين عاماً
+                  في علاج آلاف الحالات</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown Section -->
+  <section id="countdown-section" class="py-16 bg-gray-50 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <div class="absolute top-6 left-20 w-32 h-32 rounded-full bg-white"></div>
+      <div class="absolute bottom-3 right-20 w-40 h-40 rounded-full bg-white"></div>
+    </div>
+    <!-- Decorative Elements -->
+    <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-[#1e3a8a]/10 blur-3xl"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8 bg-blue-900 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-xl">
+        <!-- Countdown Units -->
+        <div class="flex items-center gap-2 md:gap-6">
+          <!-- Days -->
+          <div class="countdown-unit group relative">
+            <div
+              class="countdown-value-container relative overflow-hidden rounded-xl p-1 bg-gradient-to-br from-white/10 to-white/20 shadow-inner shadow-black/20">
+              <div
+                class="countdown-value bg-white/5 backdrop-blur-md rounded-lg p-2 md:p-5 text-2xl md:text-4xl md:text-5xl font-extrabold text-white text-center min-w-[15px] transition-all duration-300 group-hover:bg-white/10 group-hover:scale-[1.02]"
+                id="days">00</div>
+              <div class="absolute inset-0 rounded-lg border border-white/10 pointer-events-none"></div>
+            </div>
+            <div
+              class="countdown-label flex items-center justify-center gap-2 mt-3 text-white/90 text-sm font-semibold tracking-wide">
+              <i class="fas fa-calendar-day text-red-500 transition-all duration-300 group-hover:text-red-400"></i>
+              <span class="font-bold" data-i18n="days">أيام</span>
+            </div>
+          </div>
+
+          <div class="text-4xl text-white/30 font-bold -mb-4">:</div>
+
+          <!-- Hours -->
+          <div class="countdown-unit group relative">
+            <div
+              class="countdown-value-container relative overflow-hidden rounded-xl p-1 bg-gradient-to-br from-white/10 to-white/20 shadow-inner shadow-black/20">
+              <div
+                class="countdown-value bg-white/5 backdrop-blur-md rounded-lg p-2 md:p-5 text-2xl md:text-4xl md:text-5xl font-extrabold text-white text-center min-w-[15px] transition-all duration-300 group-hover:bg-white/10 group-hover:scale-[1.02]"
+                id="hours">00</div>
+              <div class="absolute inset-0 rounded-lg border border-white/10 pointer-events-none"></div>
+            </div>
+            <div
+              class="countdown-label flex items-center justify-center gap-2 mt-3 text-white/90 text-sm font-semibold tracking-wide">
+              <i class="fas fa-clock text-red-500 transition-all duration-300 group-hover:text-red-400"></i>
+              <span class="font-bold" data-i18n="hours">ساعات</span>
+            </div>
+          </div>
+
+          <div class="text-4xl text-white/30 font-bold -mb-4">:</div>
+
+          <!-- Minutes -->
+          <div class="countdown-unit group relative">
+            <div
+              class="countdown-value-container relative overflow-hidden rounded-xl p-1 bg-gradient-to-br from-white/10 to-white/20 shadow-inner shadow-black/20">
+              <div
+                class="countdown-value bg-white/5 backdrop-blur-md rounded-lg p-2 md:p-5 text-2xl md:text-5xl md:text-5xl font-extrabold text-white text-center min-w-[15px] transition-all duration-300 group-hover:bg-white/10 group-hover:scale-[1.02]"
+                id="minutes">00</div>
+              <div class="absolute inset-0 rounded-lg border border-white/10 pointer-events-none"></div>
+            </div>
+            <div
+              class="countdown-label flex items-center justify-center gap-2 mt-3 text-white/90 text-sm font-semibold tracking-wide">
+              <i class="fas fa-hourglass-half text-red-500 transition-all duration-300 group-hover:text-red-400"></i>
+              <span class="font-bold" data-i18n="minutes">دقائق</span>
+            </div>
+          </div>
+
+          <div class="text-4xl text-white/30 font-bold -mb-4">:</div>
+
+          <!-- Seconds -->
+          <div class="countdown-unit group relative">
+            <div
+              class="countdown-value-container relative overflow-hidden rounded-xl p-1 bg-gradient-to-br from-white/10 to-white/20 shadow-inner shadow-black/20">
+              <div
+                class="countdown-value bg-white/5 backdrop-blur-md rounded-lg p-2 md:p-5 text-2xl md:text-4xl md:text-5xl font-extrabold text-white text-center min-w-[15px] transition-all duration-300 group-hover:bg-white/10 group-hover:scale-[1.02]"
+                id="seconds">00</div>
+              <div class="absolute inset-0 rounded-lg border border-white/10 pointer-events-none"></div>
+            </div>
+            <div
+              class="countdown-label flex items-center justify-center gap-2 mt-3 text-white/90 text-sm font-semibold tracking-wide">
+              <i class="fas fa-stopwatch text-red-500 transition-all duration-300 group-hover:text-red-400"></i>
+              <span class="font-bold" data-i18n="seconds">ثواني</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register Button -->
+        <button data-modal-toggle="registration"
+          class="open-registration-button relative overflow-hidden px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-50 hover:to-[#ffffff] hover:text-red-700 text-white rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300 hover:scale-105 group shadow-lg mt-6 md:mt-0">
+          <span class="relative z-10 flex items-center gap-3">
+            <i class="fas fa-user-plus transition-transform duration-300 group-hover:scale-110"></i>
+            <span class="tracking-wide" data-i18n="register_text_2">احجز مقعدك الآن</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gray-50 relative">
+    <!-- Background image with very low opacity -->
+    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-5 z-0"
+      style="background-image: url('./assets/tt.png');"></div>
+    <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center mb-16">
+          <!-- Main Title -->
+          <div class="inline-flex flex-col items-center relative mb-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-medical-primary mb-4 relative z-10 px-6 bg-gray-50"
+              data-i18n="testimonials_title">
+              <span class="relative inline-block">
+                <span
+                  class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-medical-primary to-medical-accent rounded-full"></span>
+                آراء المشاركين
+              </span>
+            </h2>
+            <div
+              class="absolute bottom-3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-medical-primary to-transparent">
+            </div>
+          </div>
+
+          <!-- Subtitle -->
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto relative" data-i18n="testimonials_subtitle">
+            <span class="bg-gray-50 px-4 relative">
+              ما قاله المرضى عن تجربتهم مع العلاج
+            </span>
+          </p>
+        </div>
+
+        <div class="swiper-container testimonials-swiper">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-6">
+                  <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Patient"
+                    class="w-16 h-16 rounded-full object-cover border-2 border-medical-primary/20">
+                  <div class="mx-4">
+                    <h4 class="font-bold text-lg" data-i18n="testimonial_1_name">أمينة محمد</h4>
+                    <p class="text-gray-500" data-i18n="testimonial_1_role">مريضة سكر منذ 10 سنوات</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 italic" data-i18n="testimonial_1_text">
+                  "بفضل الله ثم بفضل البرنامج العلاجي للدكتور عبدالحميد، استعدت حياتي الطبيعية بعد سنوات من المعاناة مع
+                  آلام الأعصاب."
+                </p>
+                <div class="mt-4 text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-6">
+                  <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Patient"
+                    class="w-16 h-16 rounded-full object-cover border-2 border-medical-primary/20">
+                  <div class="mx-4">
+                    <h4 class="font-bold text-lg" data-i18n="testimonial_2_name">أحمد السيد</h4>
+                    <p class="text-gray-500" data-i18n="testimonial_2_role">مريض سكر منذ 8 سنوات</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 italic" data-i18n="testimonial_2_text">
+                  "كنت أعاني من حرقان شديد في القدمين يمنعني من النوم، والآن بفضل العلاج استطيع النوم والعيش بشكل
+                  طبيعي."
+                </p>
+                <div class="mt-4 text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide">
+              <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-6">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient"
+                    class="w-16 h-16 rounded-full object-cover border-2 border-medical-primary/20">
+                  <div class="mx-4">
+                    <h4 class="font-bold text-lg" data-i18n="testimonial_3_name">فاطمة علي</h4>
+                    <p class="text-gray-500" data-i18n="testimonial_3_role">مريضة سكر منذ 12 سنة</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 italic" data-i18n="testimonial_3_text">
+                  "جربت العديد من العلاجات بدون فائدة، لكن بعد اتباع برنامج الدكتور شعرت بتحسن كبير في خلال أسابيع
+                  قليلة."
+                </p>
+                <div class="mt-4 text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination mt-8"></div>
+        </div>
+      </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50 w-full relative">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-medical-primary mb-16" data-i18n="faq_title">الأسئلة
+        الشائعة</h2>
+
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg">
+          <button
+            class="faq-question w-full flex justify-between items-center p-6 text-lg font-semibold text-gray-800 hover:bg-gray-50 transition-all">
+            <span data-i18n="faq_q1_question">هل الندوة مجانية أم مدفوعة؟</span>
+            <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 -mt-3 text-gray-600 border-t border-gray-100">
+            <p data-i18n="faq_q1_answer">الندوة مجانية بالكامل ولا يوجد أي رسوم للحضور. نحن نهدف إلى نشر المعرفة
+              والمساعدة في علاج أكبر عدد ممكن من المرضى.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg">
+          <button
+            class="faq-question w-full flex justify-between items-center p-6 text-lg font-semibold text-gray-800 hover:bg-gray-50 transition-all">
+            <span data-i18n="faq_q2_question">كيف يمكنني حضور الندوة؟</span>
+            <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 -mt-3 text-gray-600 border-t border-gray-100">
+            <p data-i18n="faq_q2_answer">بعد التسجيل، سيصلك رابط الدخول إلى الندوة عبر رسالة على
+              الواتساب قبل موعد الندوة بساعة.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg">
+          <button
+            class="faq-question w-full flex justify-between items-center p-6 text-lg font-semibold text-gray-800 hover:bg-gray-50 transition-all">
+            <span data-i18n="faq_q3_question">هل يمكنني مشاهدة الندوة لاحقًا إذا فاتني الموعد؟</span>
+            <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 -mt-3 text-gray-600 border-t border-gray-100">
+            <p data-i18n="faq_q3_answer">نعم، سيصلك رابط لتسجيل الندوة بعد انتهائها إذا قمت بالتسجيل مسبقًا، لكن ننصح
+              بالحضور المباشر للاستفادة من فرصة طرح الأسئلة على الدكتور مباشرة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Registration Modal -->
+  <div id="registration-modal" class="fixed inset-0 z-[9999] hidden overflow-y-auto" aria-modal="true" aria-labelledby="modal-title" role="dialog">
+    <!-- Background overlay with smooth transition -->
+    <div class="fixed inset-0 transition-opacity duration-300 ease-in-out" aria-hidden="true">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/70 to-blue-700/70 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out" id="modal-overlay"></div>
+    </div>
+
+    <!-- Modal container with centered content -->
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Modal panel with animated entrance -->
+        <div class="inline-block align-bottom bg-gradient-to-br from-white via-blue-50 to-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full opacity-0 translate-y-10 scale-95" id="modal-content">
+            <!-- Close button with smooth hover effects -->
+            <div class="absolute top-4 left-4 z-10">
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700 focus:outline-none transition-all duration-200 transform hover:rotate-90 hover:scale-110" aria-label="Close modal">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="px-6 py-6 sm:px-8 sm:pb-8 relative">
+                <!-- Form content -->
+                <div id="form-content">
+                    <!-- Header with decorative border -->
+                    <div class="text-center border-x-4 border-[#1e3a8a] my-6 p-4 relative overflow-hidden">
+                        <div class="absolute -inset-1 bg-[#1e3a8a]/10 rounded-lg -z-10"></div>
+                        <h3 class="text-2xl font-bold text-[#1e3a8a]" id="modal-title" data-i18n="register-title">سجل في الندوة الآن</h3>
+                        <p class="text-gray-600 mt-2 text-sm" data-i18n="register-modal-subtitle">املأ البيانات التالية لتأكيد حجزك</p>
+                    </div>
+
+                    <!-- Registration Form with enhanced fields -->
+                    <form id="webinar-form" class="space-y-5">
+                        <div>
+                          <label for="name" class="block text-start text-sm font-medium text-gray-700 mb-1"
+                            data-i18n="form_fullname">الاسم</label>
+                          <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                              <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <input type="text" id="name" name="name"
+                              class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 pr-10 text-gray-900 focus:outline-none focus:ring-2 focus:ring-medical-accent focus:border-transparent transition-all">
+                          </div>
+                          <p id="name-error" class="mt-1 text-sm text-red-600 hidden"></p>
+                        </div>
+          
+                        <div class="grid grid-cols-2 gap-4">
+                          <div>
+                            <label for="country" class="block text-start text-sm font-medium text-gray-700 mb-1"
+                              data-i18n="form_country">الدولة</label>
+                            <div class="relative">
+                              <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-globe text-gray-400"></i>
+                              </div>
+                              <select id="country" name="country"
+                                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 pr-10 text-gray-900 focus:outline-none focus:ring-2 focus:ring-medical-accent focus:border-transparent appearance-none">
+                                <option value="EG">🇪🇬 مصر (+20)</option>
+                                <option value="SA">🇸🇦 السعودية (+966)</option>
+                                <option value="AE">🇦🇪 الإمارات (+971)</option>
+                                <option value="KW">🇰🇼 الكويت (+965)</option>
+                                <option value="QA">🇶🇦 قطر (+974)</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div>
+                            <label for="phone" class="block text-start text-sm font-medium text-gray-700 mb-1"
+                              data-i18n="form-phone">رقم الواتساب</label>
+                            <div class="relative">
+                              <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-phone text-gray-400"></i>
+                              </div>
+                              <input type="tel" id="phone" name="phone"
+                                class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 pr-10 text-gray-900 focus:outline-none focus:ring-2 focus:ring-medical-accent focus:border-transparent">
+                            </div>
+                            <p id="phone-error" class="mt-1 text-sm text-red-600 hidden"></p>
+                          </div>
+                        </div>
+                        <input type="hidden" id="full-phone-number" name="full-phone-number">
+
+                        <!-- reCAPTCHA container with proper sizing -->
+                        <div id="recaptcha-container" class="flex justify-center py-2 min-h-[78px]" aria-live="polite"></div>
+
+                        <!-- Submit button with loading state -->
+                        <div class="pt-2">
+                            <button id="submit-btn" type="submit" disabled
+                                class="w-full bg-gradient-to-r from-[#1e3a8a] to-medical-secondary hover:from-[#1e3a8a] hover:to-[#1e3a8a]/90 text-white font-bold py-3 px-4 rounded-lg transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-md hover:shadow-lg active:scale-[0.98] group">
+                                <span id="submit-text" class="flex items-center justify-center">
+                                    <span class="group-hover:animate-pulse">
+                                        <i class="fas fa-paper-plane mx-2"></i>
+                                    </span>
+                                    <span data-i18n="form-submit">اضغط هنا</span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Thank You Message with animated entrance -->
+                <div id="thank-you-message" class="hidden px-4 pb-4 text-center" aria-live="assertive">
+                    <div class="animate-[bounceIn_0.6s]">
+                        <!-- Animated checkmark -->
+                        <div class="mx-auto mb-4">
+                          <img src="./assets/042153f184620ac9dd0d98140234338f.gif" class="w-22 h-22 text-green-500 mx-auto animate-[heartbeat_1.5s_ease-in-out_infinite]" alt="" srcset="">
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">مبرووك نجحت فى التسجيل</h3>
+                        <p class="text-gray-700 mb-4">سيصلك رسالة تأكيد على رقم الواتس المسجل.</p>
+
+                        <!-- Social media section with hover effects -->
+                        <div class="py-3 border border-dashed border-[#1e3a8a]/50 rounded-lg mb-4 max-w-xs mx-auto">
+                            <h5 class="font-medium text-[#1e3a8a] mb-3">تابعنا</h5>
+                            <div id="success-social-media" class="flex justify-center gap-4">
+                                <a href="https://www.facebook.com/p/الدكتور-عبد-الحميد-حمد-100091952990054/" 
+                                   class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all transform hover:-translate-y-1 shadow-md"
+                                   aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://twitter.com/AbdulHamidHamad" 
+                                   class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-400 text-white hover:bg-blue-500 transition-all transform hover:-translate-y-1 shadow-md"
+                                   aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@DrAbdulHamidHamad" 
+                                   class="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition-all transform hover:-translate-y-1 shadow-md"
+                                   aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@dr.abdulhamidhamad" 
+                                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-gray-900 transition-all transform hover:-translate-y-1 shadow-md"
+                                   aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Close button -->
+                        <button id="close-after-success"
+                            class="mt-4 bg-[#1e3a8a] hover:bg-medical-secondary text-white font-medium py-2 px-6 rounded-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#1e3a8a] focus:ring-offset-2">
+                            رائع، شكرًا لك
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Registration CTA Section -->
+  <section class="py-16 text-white relative overflow-hidden min-h-[400px] flex items-center">
+    <div class="parallax-bg absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('./assets/section6.png')] bg-cover bg-center bg-no-repeat"
+        data-parallax="scroll" data-image-src="./assets/section6.png" data-position="center" data-bleed="50"
+        data-speed="0.4"></div>
+      <div class="absolute inset-0 bg-blue-900/60 backdrop-blur-sm"></div>
+    </div>
+
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-20 w-32 h-32 rounded-full bg-white/10 backdrop-blur-sm animate-float-slow"></div>
+      <div class="absolute bottom-20 right-20 w-40 h-40 rounded-full bg-white/10 backdrop-blur-sm animate-float"></div>
+      <div
+        class="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-blue-400/20 backdrop-blur-sm animate-float-slower">
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white" data-i18n="cta_title">سجل
+            في الندوة الطبية الآن</span>
+        </h2>
+        <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-white/90 leading-relaxed" data-i18n="cta_subtitle">
+          احجز مقعدك في الندوة المجانية وتعلم أحدث الطرق العلمية لعلاج ألم الأعصاب السكري</p>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+          <div
+            class="bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-center gap-2">
+                <div class="bg-blue-800 p-2 rounded-full">
+                  <i class="fas fa-calendar-check text-white text-lg"></i>
+                </div>
+                <span class="font-medium text-lg" data-i18n="cta_date">15 ديسمبر 2025</span>
+              </div>
+              <div class="flex items-center justify-center gap-2">
+                <div class="bg-blue-800 p-2 rounded-full">
+                  <i class="fas fa-clock text-white text-lg"></i>
+                </div>
+                <span class="font-medium text-lg" data-i18n="cta_time">8:00 مساءً - 11:30 مساءً (توقيت القاهرة)</span>
+              </div>
+            </div>
+          </div>
+
+          <button data-modal-toggle="registration"
+            class="open-registration-button relative overflow-hidden px-10 py-5 bg-gradient-to-r from-blue-800 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white rounded-full text-lg font-bold hover:shadow-xl transition-all duration-300 hover:scale-105 group shadow-lg">
+            <span class="relative z-10 flex items-center gap-3">
+              <i class="fas fa-user-plus transition-transform duration-300 group-hover:scale-110"></i>
+              <span class="tracking-wide" data-i18n="cta_button">احجز مقعدك الآن</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="mt-10 animate-pulse-slow">
+          <div
+            class="inline-flex items-center bg-red-600/30 backdrop-blur-sm border border-red-400/50 px-6 py-3 rounded-full text-red-100 font-medium shadow-lg">
+            <span class="relative flex h-3 w-3 mx-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+            <span data-i18n="cta_warning">المقاعد محدودة - سجل مكانك الآن قبل اكتمال العدد!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t border-gray-200 py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold text-medical-primary mb-4" data-i18n="footer_about_title">عن الدكتور</h3>
+            <p class="text-gray-600 mb-4" data-i18n="footer_about_desc">استشاري وخبير عالمي في علاج الألم وخاصة الألم
+              العصبي من جامعة تورونتو في كندا.</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-medical-primary mb-4" data-i18n="footer_links_title">روابط سريعة</h3>
+            <ul class="space-y-2">
+              <li><a href="#video-section" class="text-gray-600 hover:text-medical-primary transition-colors"
+                  data-i18n="footer_links_video">الفيديو التعريفي</a></li>
+              <li><a href="#about-doctor" class="text-gray-600 hover:text-medical-primary transition-colors"
+                  data-i18n="footer_links_about">عن الدكتور</a></li>
+              <li><a href="#webinar-details" class="text-gray-600 hover:text-medical-primary transition-colors"
+                  data-i18n="footer_links_details">تفاصيل الندوة</a></li>
+              <li><a href="#testimonials" class="text-gray-600 hover:text-medical-primary transition-colors"
+                  data-i18n="footer_links_testimonials">آراء المرضى</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-medical-primary mb-4" data-i18n="footer_contact_title">تواصل معنا</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-[#1e3a8a] mt-1 mx-2"></i>
+                <span class="text-gray-600">info@medicalpain.com</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone text-[#1e3a8a] mt-1 mx-2"></i>
+                <span class="text-gray-600">+20 100 000 0000</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-medical-primary mb-4" data-i18n="footer_newsletter_title"> تابعنا على
+              مواقع التواصل
+            </h3>
+            <p class="text-gray-600 mb-4" data-i18n="footer_newsletter_desc">تابعنا على مواقع التواصل ليصلك كل جديد عن
+              الندوات القادمة
+              والنصائح الطبية.</p>
+            <div class="flex gap-4">
+              <a href="#" class="text-gray-500 hover:text-[#1e3a8a] transition-colors">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-[#1e3a8a] transition-colors">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-[#1e3a8a] transition-colors">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
+          <p class="mb-2" data-i18n="footer_copyright1">© 2025 مركز علاج الألم العصبي. جميع الحقوق محفوظة.</p>
+          <p class="text-sm" data-i18n="footer_copyright2">هذه الندوة تقدم لأغراض تعليمية فقط ولا تغني عن استشارة الطبيب
+            المختص.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Add this script right before closing body tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize Vanta.js only on large screens
+      if (window.innerWidth > 768) {
+        VANTA.NET({
+          el: "#vanta-background",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0xffffff,  // Blue-500
+          backgroundColor: 0x1e3a8a,  // Sky-900
+          points: 12.00,
+          maxDistance: 22.00,
+          spacing: 18.00
+        });
+      }
+
+      // Play button functionality
+      const laptopScreen = document.querySelector('.laptop-screen');
+      const videoIframe = document.querySelector('.laptop-screen iframe');
+      const playOverlay = document.querySelector('.play-overlay');
+      const playButton = document.querySelector('.play-button');
+
+      if (playOverlay) {
+        playOverlay.addEventListener('click', function () {
+          // For YouTube iframe
+          const videoUrl = videoIframe.src;
+          videoIframe.src = videoUrl.includes('?') ?
+            `${videoUrl}&autoplay=1` :
+            `${videoUrl}?autoplay=1`;
+
+          // Hide play overlay
+          playOverlay.style.opacity = '0';
+          playOverlay.style.pointerEvents = 'none';
+        });
+      }
+
+      // External play button
+      const externalPlayBtn = document.querySelector('button:has(.fa-play-circle)');
+      if (externalPlayBtn) {
+        externalPlayBtn.addEventListener('click', function () {
+          playOverlay.click();
+        });
+      }
+    });
+  </script>
+  <!-- JavaScript Files -->
+  <script src="./scripts/lang.js" defer></script>
+  <script src="./scripts/script.js" defer></script>
+  <script src="./scripts/animation.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+/* ============================================= */
+/*               ROOT VARIABLES                  */
+/* ============================================= */
+:root {
+  /* Text & Size Adjustments */
+  -webkit-text-size-adjust: 100%;
+  
+  /* Color System - Brand Colors */
+  --base-color-brand--yellow-main: #ffd705;
+  --base-color-brand--blue-main: #214ded;
+  --base-color-brand--green-main: #2a9d8f;
+  
+  /* Secondary Colors */
+  --base-color-secondary--yellow-button: #e3bf03;
+  --base-color-secondary--blue-button: #1334ac;
+  --base-color-secondary--yellow-tag: #ffef9b;
+  --base-color-secondary--blue-dark: #0f2d6641;
+  --base-color-secondary--blue-darker: #000b35;
+  
+  /* Neutral Colors */
+  --base-color-neutral--black: black;
+  --base-color-neutral--white: white;
+  --base-color-neutral--beige: #f9f4ee;
+  --base-color-neutral--grey-lightest: #e9edfb;
+  --base-color-neutral--grey-lighter: #e7ecf1;
+  --base-color-neutral--grey-light: #ccd7e4;
+  --base-color-neutral--grey-dark: #414863;
+  --base-color-neutral--grey-darker: #383d52;
+  --base-color-neutral--grey-darkest: #272a37;
+  --base-color-neutral--grey-additional: #868998;
+  
+  /* System Colors */
+  --base-color-system--success-green: #2a9d8f;
+  --base-color-system--success-green-light: #ecfdf3;
+  --base-color-system--error-red: #b42318;
+  --base-color-system--error-red-light: #fef3f2;
+  
+  /* Additional Blues */
+  --base-dark-blue: #0f2c4e;
+  --base-canadian-blue: #3a6ea5;
+  --base-royal-purple: #5d4d7a;
+  
+  /* Text Colors */
+  --text-color--text-primary: var(--base-color-neutral--grey-darkest);
+  --text-color--text-secondary: var(--base-color-neutral--white);
+  --text-color--text-tertiary: var(--base-color-neutral--grey-additional);
+  --text-color--text-quarternary: var(--base-color-neutral--grey-light);
+  --text-color--text-h1: var(--base-color-neutral--grey-lightest);
+  --text-color--text-alternate: var(--base-color-neutral--white);
+  --text-color--text-success: var(--base-color-system--success-green);
+  --text-color--text-error: var(--base-color-system--error-red);
+  
+  /* Background Colors */
+  --background-color--background-primary: var(--base-color-neutral--white);
+  --background-color--background-secondary: var(--base-color-neutral--beige);
+  --background-color--background-tertiary: var(--base-color-neutral--grey-darkest);
+  --background-color--background-quaternary: var(--base-color-secondary--blue-dark);
+  --background-color--background-alternate: var(--base-color-neutral--black);
+  --background-color--background-success: var(--base-color-system--success-green-light);
+  --background-color--background-error: var(--base-color-system--error-red-light);
+  
+  /* Link Colors */
+  --link-color--link-primary: var(--text-color--text-primary);
+  --link-color--link-secondary: var(--text-color--text-secondary);
+  --link-color--link-alternate: var(--text-color--text-alternate);
+  
+  /* Border Colors */
+  --border-color--border-primary: var(--base-color-neutral--grey-light);
+  --border-color--border-secondary: var(--base-color-brand--blue-main);
+  --border-color--border-alternate: var(--base-color-neutral--black);
+  
+  /* Animation Index */
+  --i: 0;
+}
+
+/* ============================================= */
+/*               BASE STYLES                     */
+/* ============================================= */
+body {
+  background: linear-gradient(to bottom, #1e3a8a 0%,  #254aad 50%);
+  font-family: 'Lemonada', sans-serif;
+}
+
+.font-arbic {
+  font-family: 'Lemonada', sans-serif;
+}
+
+/* ============================================= */
+/*               MAIN SECTIONS                   */
+/* ============================================= */
+#main {
+  background-image: linear-gradient(to top, #2649a9 0%, #717171b7 50%, transparent 100%),
+                   url('https://dogadamycie.pl/wp-content/uploads/2021/01/webinar-dc.jpg');
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  min-height: 110vh;
+}
+
+/* ============================================= */
+/*               ANIMATIONS                      */
+/* ============================================= */
+/* Fade In Up Animation */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Pulse Animation */
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+/* Bounce Animation */
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+/* ============================================= */
+/*               TEXT & GRADIENTS                */
+/* ============================================= */
+.text-gradient-hasan {
+  background: linear-gradient(90deg, #10469e6b 0%, #10469E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================= */
+/*               CARDS & COMPONENTS              */
+/* ============================================= */
+.card {
+  transition: transform 0.3s ease-out;
+}
+
+.medical-card-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: perspective(1000px) rotateX(15deg) translateY(0);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================= */
+/*               BUTTONS                         */
+/* ============================================= */
+.btn-gold {
+  background: linear-gradient(135deg, #c99b30, #e8c97d);
+  box-shadow: 0 4px 15px rgba(201, 155, 48, 0.4);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #e8c97d, #c99b30);
+  transform: translateY(-3px);
+}
+
+.btn-red {
+  background: linear-gradient(135deg, #c93030, #e87d7d);
+  box-shadow: 0 4px 15px rgba(201, 155, 48, 0.4);
+}
+
+.btn-red:hover {
+  background: linear-gradient(135deg, #e87d7d, #c93030);
+  transform: translateY(-3px);
+}
+/* ============================================= */
+/*               SPECIAL EFFECTS                 */
+/* ============================================= */
+/* Social Media Hover Effects */
+.social-hover-effect a {
+  position: relative;
+  overflow: hidden;
+  transition: all 265ms ease-out;
+}
+
+.social-hover-effect a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(45deg, #00d4f5, rgba(10, 49, 61, 0.9));
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: transform 265ms ease-out;
+}
+
+.social-hover-effect a:hover::before {
+  transform: scale(0);
+  transition: transform 265ms ease-in;
+}
+
+.social-hover-effect a:hover i {
+  transform: scale(2.2);
+  background: -webkit-linear-gradient(45deg, #00d4f5, #0a313d7e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: all 265ms ease-in;
+}
+
+/* ============================================= */
+/*               WAVES & DIVIDERS                */
+/* ============================================= */
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.section-divider {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, #fff);
+  z-index: 1;
+}
+
+/* ============================================= */
+/*               VIDEO SECTION                   */
+/* ============================================= */
+#video-laptop-section {
+  perspective: 1000px;
+}
+
+.laptop-frame-container {
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+.play-overlay {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.play-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================= */
+/*               RESPONSIVE DESIGN               */
+/* ============================================= */
+@media (max-width: 768px) {
+  .waves {
+      height: 40px;
+      min-height: 40px;
+  }
+  
+  .laptop-frame-container {
+      max-width: 90%;
+  }
+  
+  .play-button {
+      width: 50px;
+      height: 50px;
+  }
+}
+
+/* ============================================= */
+/*               UTILITY CLASSES                 */
+/* ============================================= */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+.loading {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* ============================================= */
+/*               KEYFRAMES                       */
+/* ============================================= */
+@keyframes floating {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes move-forever {
+  0% {
+      transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+      transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float-slow { animation: float 8s ease-in-out infinite; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-float-slower { animation: float 10s ease-in-out infinite; }
